@@ -24,10 +24,6 @@ main:
     url: /year-archive/
   - title: "Tags"
     url: /tags/
-  - title: "Categories"
-    url: /categories/
-  - title: "Collections"
-    url: /collection-archive/
   - title: "About Me"
     url: /about/
 
