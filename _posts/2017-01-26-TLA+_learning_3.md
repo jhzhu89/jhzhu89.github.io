@@ -6,10 +6,9 @@ categories:
 tags:
   - TLA+
   - distributed systems
+toc: true
 excerpt_separator: <!--more-->
 ---
-
-{% include toc icon="file-text" %}
 
 这本书的第四章，讲述了如何描述一个 FIFO。
 

@@ -1,16 +1,15 @@
 ---
 layout: single
 title:  "boltdb介绍"
-categories: 
+categories:
   - Written in Chinese
   - database
 tags:
   - etcd
   - boltdb
+toc: true
 excerpt_separator: <!--more-->
 ---
-
-{% include toc icon="file-text" %}
 
 boltdb是一个轻量级的、嵌入式的golang原生key-value DB，在etcd中作为存储后端使用。它使用了b+树、mmap、copy on write等技术，支持读写事物。本文将结合技术原理和内部实现来分析boltdb。
 

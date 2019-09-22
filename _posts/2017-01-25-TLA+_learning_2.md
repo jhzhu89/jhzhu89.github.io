@@ -6,10 +6,9 @@ categories:
 tags:
   - TLA+
   - distributed systems
+toc: true
 excerpt_separator: <!--more-->
 ---
-
-{% include toc icon="file-text" %}
 
 第三章，讲述了如何描述一个异步接口。
 
