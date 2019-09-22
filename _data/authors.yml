@@ -1,0 +1,10 @@
+# Authors
+
+Jiahao Zhu:
+  name        : "Jiahao Zhu"
+  bio         : "Software developer."
+  avatar      : "/assets/images/bio-photo-2.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:jiahao.zhu89@outlook.com"
