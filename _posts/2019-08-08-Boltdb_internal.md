@@ -15,7 +15,7 @@ boltdb是一个轻量级的、嵌入式的golang原生key-value DB，在etcd中�
 
 <!--more-->
 
-bolt db的官方介绍如下：
+boltdb的官方介绍如下：
 
 > Bolt is a pure Go key/value store inspired by [Howard Chu's](https://twitter.com/hyc_symas) [LMDB project](http://symas.com/mdb/). The goal of the project is to provide a simple, fast, and reliable database for projects that don't require a full database server such as Postgres or MySQL.
 
@@ -146,13 +146,13 @@ func (b *Bucket) maxInlineBucketSize() int {
 }
 ```
 
-*root bucket是b+树的根节点*，一切key-value pair、子bucket，都必须从root开始查找。每次创建一个新的Tx-事务-时，tx都会调整自己的root bucket，来指向meta page存的root bucket。
+*root bucket是b+树的根节点*，一切key-value pair、子bucket，都必须从root开始查找。每次创建一个新的Tx（事务）时，tx都会调整自己的root bucket，来指向meta page存的root bucket。
 
 ## boltdb的disk layout
 
 ### 首次打开的空数据库
 
-对于第一次打开的数据库空文件，bolt会对其做初始化，填充好两个meta page，一个空的freelist，和一个空的root page。可以使用bolt来校验一下前4个page，发现两个meta page存储的内容基本相同，出了txn ID;freelist指向page 2，root page则指向3，当前一共有4个page。
+对于第一次打开的数据库空文件，bolt会对其做初始化，填充好两个meta page，一个空的freelist，和一个空的root page。可以使用bolt来校验一下前4个page，发现两个meta page存储的内容基本相同，除了txn ID;freelist指向page 2，root page则指向3，当前一共有4个page。
 
 ```bash
  ~/go/src/g/j/bolt_debug  bolt page db 0
@@ -325,3 +325,5 @@ func (f *freelist) releaseRange(begin, end txid) {
 boltdb中存储的数据，是按照key来排序的。那么在插入、和查找数据的时候，就需要能够快速定位到正确的page。bolt实现了cursor这个迭代器，来辅助插入、删除等操作。
 
 ## 总结
+
+boltdb以较小的代码规模，使用mmap、COW等技术，以b+树作为核心数据结构，实现了一个小巧的、支持事务的key-value数据库，可以作为实现更为复杂的系统的基石。
