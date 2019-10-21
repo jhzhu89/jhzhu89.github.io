@@ -7,6 +7,7 @@ tags:
   - TLA+
   - distributed systems
 toc: true
+mathjax: true
 excerpt_separator: <!--more-->
 ---
 
