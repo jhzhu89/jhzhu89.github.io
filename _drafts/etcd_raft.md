@@ -13,3 +13,5 @@ node进一步封装rawnode，从而可以自己run？？
 当applier收到请求，将commit的entry apply了之后，会trigger，server节点就会知道这个id的请求已经在这个节点上完成，这时候就可以返回结果了。
 
 请求是被设置了超时时间的，所有就保证了不会在极端情况下一直hang
+
+TODO
