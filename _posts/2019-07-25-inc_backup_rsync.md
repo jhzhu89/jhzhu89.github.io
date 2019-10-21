@@ -58,7 +58,7 @@ Currently, rsync algorithm is implemented in golang as a standalone library (the
 - have to call [cpp librsync](https://github.com/librsync/librsync) thru cgo while memory manipulation in cgo is hard to control
 - existing golang rsync libraries are not well tested
 
-Some implementation detials of this library can be found in this page.
+Some implementation details of this library can be found in another post.
 
 ## Incremental backup based on rsync algorithm
 
