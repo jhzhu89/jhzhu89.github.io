@@ -11,6 +11,8 @@ mathjax: true
 excerpt_separator: <!--more-->
 ---
 
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+
 这本书的第四章，讲述了如何描述一个 FIFO。
 
 <!--more-->

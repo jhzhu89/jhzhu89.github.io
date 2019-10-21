@@ -11,6 +11,8 @@ mathjax: true
 excerpt_separator: <!--more-->
 ---
 
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+
 最近在读Raft这篇关于分布式系统一致性算法的论文。作者采用了TLA+语言来描述Raft的规范。像英语、汉语这样的自然语言，很难很精确的描述一个系统得行为。大牛`Leslie Lamport`发明了TLA，通过时序逻辑方程来描述系统。TLA为描述系统提供了数学基础，而TLA+是构建在TLA上的一个完备的描述语言。
 
 <!--more-->

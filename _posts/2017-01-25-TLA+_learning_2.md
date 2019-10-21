@@ -11,6 +11,8 @@ mathjax: true
 excerpt_separator: <!--more-->
 ---
 
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+
 第三章，讲述了如何描述一个异步接口。
 
 <!--more-->
