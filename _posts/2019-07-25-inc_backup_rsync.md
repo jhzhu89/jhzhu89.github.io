@@ -2,7 +2,6 @@
 layout: single
 title:  "Incremental backup based on rsync algorithm"
 categories:
-  - Written in English
   - rsync
 tags:
   - rsync
